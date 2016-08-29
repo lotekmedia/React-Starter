@@ -7,7 +7,7 @@
     "npm": "3.7.1"
   },
   "scripts": {
-    "start": "npm-run-all --parallel test:watch open:src lint:watch",
+    "start": "./node_modules/.bin/babel-node  tools/distServer.js",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
