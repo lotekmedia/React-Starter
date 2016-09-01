@@ -6,7 +6,7 @@ import CourseForm from './CourseForm';
 import {authorsFormattedForDropdown} from '../../selectors/selectors';
 import toastr from 'toastr';
 
-export class ManageCoursePage extends React.Component {
+class ManageCoursePage extends React.Component {
     constructor(props, context) {
         super(props, context);
 
@@ -115,5 +115,5 @@ function mapDispatchToProps(dispatch){
         actions: bindActionCreators(courseActions, dispatch)
     };
 }
-
+export {ManageCoursePage as ManageCoursePageTest};
 export default connect(mapStateToProps,mapDispatchToProps)(ManageCoursePage);
