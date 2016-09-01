@@ -28,12 +28,12 @@ export default {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
-      {test: /(\.css)$/, loader: ExtractTextPlugin.extract("css?sourceMap")},
-      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
-      {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
-      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
-      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
+      {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel'], exclude: /node_modules/},
+      {test: /(\.css)$/, loader: ExtractTextPlugin.extract("css?sourceMap"), exclude: /node_modules/},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file', exclude: /node_modules/},
+      {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000', exclude: /node_modules/},
+      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream', exclude: /node_modules/},
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml', exclude: /node_modules/},
     ]
   }
 };
