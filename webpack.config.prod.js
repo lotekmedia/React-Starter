@@ -7,8 +7,7 @@ const GLOBALS = {
 };
 
 export default {
-  debug: true,
-  devtool: 'source-map',
+  debug: false,
   noInfo: false,
   entry:  './src/index',
   target: 'web',
