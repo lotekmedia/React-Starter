@@ -19,7 +19,8 @@
     "build:html": "babel-node tools/buildHtml.js",
     "prebuild": "npm-run-all clean-dist test build:html",
     "build": "babel-node tools/build.js",
-    "postbuild": "babel -o ./dist/app.js ./tools/srcServer.js"
+    "postbuild": "babel -o ./dist/app.js ./tools/srcServer.js",
+    "heroku-postbuild": "babel -o ./dist/app.js ./tools/srcServer.js"
   },
   "author": "John Mann",
   "license": "MIT",
