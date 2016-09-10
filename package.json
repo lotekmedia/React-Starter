@@ -8,7 +8,7 @@
     "npm": "3.7.1"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "npm-run-all --parallel test:watch open:src",
     "dev-start": "npm-run-all --parallel test:watch webpack:start",
     "webpack:start": "webpack-dev-server --progress --colors --config webpack.config.dev.js",
     "open:src": "babel-node tools/srcServer.js",

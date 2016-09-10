@@ -46,6 +46,7 @@ app.listen(port, function (err) {
     console.log(err);
   } else {
     (0, _open2.default)('http://localhost:' + port);
+    console.log('serving at http://localhost:' + port);
   }
 });
 //# sourceMappingURL=srcServer.js.map
